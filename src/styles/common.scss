@@ -1,0 +1,92 @@
+$accent: #FFC634;
+$accent-lighter: #ffcc00;
+$accent-darker: #ffaa00;
+$text: #FFFFFF;
+$text-secondary: #DDDDDD;
+$transparent: transparent;
+$background-accent: linear-gradient(#6E49FF, #3A1CB3);
+$divider: #DCE3E9;
+$white: #FFFFFF;
+$black: #1B1B1B;
+$black-light:#313131;
+
+$xsm: 319px;
+$sm: 575px;
+$md: 767px;
+$lg: 1023px;
+$xl: 1279px;
+$xxl: 1439px;
+
+// Mixins
+@mixin button-colors($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+}
+
+@mixin break-xsm() {
+  @media (max-width: $xsm) {
+    @content;
+  }
+}
+
+@mixin break-sm() {
+  @media (max-width: $sm) {
+    @content;
+  }
+}
+
+@mixin break-md() {
+  @media (max-width: $md) {
+    @content;
+  }
+}
+
+@mixin break-lg() {
+  @media (max-width: $lg) {
+    @content;
+  }
+}
+
+@mixin break-xl() {
+  @media (max-width: $xl) {
+    @content;
+  }
+}
+
+@mixin break-xxl() {
+  @media (max-width: $xxl) {
+    @content;
+  }
+}
+
+@mixin break-sm-up() {
+  @media (min-width: $sm) {
+    @content;
+  }
+}
+
+@mixin break-lg-up() {
+  @media (min-width: $lg) {
+    @content;
+  }
+}
+
+@mixin break-xxl-up() {
+  @media (min-width: $xxl) {
+    @content;
+  }
+}
+
+@mixin text($font-size, $line-height, $color: '', $font-weight: '',) {
+  font-size: $font-size;
+  line-height: $line-height;
+
+  @if $color != '' {
+    color: cl($color);
+  }
+
+  @if $font-weight != '' {
+    font-weight: $font-weight;
+  }
+}
