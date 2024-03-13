@@ -43,31 +43,31 @@ import { computed } from 'vue'
 const projects = [
   {
     link: 'https://vityaz.aero/',
-    img: 'my-resume/images/vityaz.png',
+    img: '../../public/images/vityaz.png',
     name: 'Vityaz-aero',
     stack: ['Vue', 'TypeScript', 'SCSS']
   },
   {
     link: 'https://rtg-company.ru/',
-    img: 'my-resume/images/rtg.png',
+    img: '../../public/images/rtg.png',
     name: 'Rtg',
     stack: ['JavaScript', 'CSS', 'HTML']
   },
   {
     link: 'https://qpzip.ru/',
-    img: 'my-resume/images/qpzip.png',
+    img: '../../public/images/qpzip.png',
     name: 'Qp-zip',
     stack: ['JavaScript', 'CSS', 'HTML']
   },
   {
     link: 'https://poisktenderov.ru/',
-    img: 'my-resume/images/poisktenderov.png',
+    img: '../../public/images/poisktenderov.png',
     name: 'Poisktenderov',
     stack: ['PUG', 'JavaScript', 'SCSS']
   },
   {
     link: 'https://kamon.dance/',
-    img: 'my-resume/images/kamon.png',
+    img: '../../public/images/kamon.png',
     name: 'Kamon',
     stack: ['Vue', 'JavaScript', 'SCSS']
   },
@@ -77,19 +77,19 @@ const projects = [
 const myProjects = [
   {
     link: 'https://github.com/DWNMRS/',
-    img: 'my-resume/images/github.png',
+    img: '../../public/images/github.png',
     name: 'GitHub',
     stack: []
   },
   {
     link: 'https://dwnmrs.github.io/movee',
-    img: 'my-resume/images/movee.png',
+    img: '../../public/images/movee.png',
     name: 'Movee',
     stack: ['Vue', 'TypeScript', 'SCSS', 'Vite']
   },
   {
     link: 'https://dwnmrs.github.io/search',
-    img: 'my-resume/images/moviesearch.png',
+    img: '../../public/images/moviesearch.png',
     name: 'Search',
     stack: ['Nuxt', 'TypeScript', 'SCSS']
   },
