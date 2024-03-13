@@ -167,7 +167,7 @@ const resolveImgPath = (img) => {
         width: 105%;
         height: 105%;
         object-fit: cover;
-        transition: 0.5s;
+        transition: 0.2s;
 
         &:hover {
           width: 100%;

@@ -22,7 +22,7 @@
     </div>
 
     <div class="greetings__photo">
-      <img class="greetings__photo-img" src="../assets/images/i2.webp">
+      <img class="greetings__photo-img" src="../assets/images/i.webp">
     </div>
   </div>
 </template>
@@ -56,13 +56,11 @@ import AppIcon from '@/assets/icons/AppIcon.vue'
 
   &__photo {
     width: 350px;
-    height: 100%;
-    overflow: hidden;
-    background-color: grey;
 
     &-img {
       width: 100%;
-      object-fit: contain;
+      height: 100%;
+      object-fit: cover;
     }
   }
 
