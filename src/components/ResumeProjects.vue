@@ -43,31 +43,31 @@ import { computed } from 'vue'
 const projects = [
   {
     link: 'https://vityaz.aero/',
-    img: '../../public/images/vityaz.png',
+    img: '/my-resume/src/assets/images/vityaz.webp',
     name: 'Vityaz-aero',
     stack: ['Vue', 'TypeScript', 'SCSS']
   },
   {
     link: 'https://rtg-company.ru/',
-    img: '../../public/images/rtg.png',
+    img: '/my-resume/src/assets/images/rtg.webp',
     name: 'Rtg',
     stack: ['JavaScript', 'CSS', 'HTML']
   },
   {
     link: 'https://qpzip.ru/',
-    img: '../../public/images/qpzip.png',
+    img: '/my-resume/src/assets/images/qpzip.webp',
     name: 'Qp-zip',
     stack: ['JavaScript', 'CSS', 'HTML']
   },
   {
     link: 'https://poisktenderov.ru/',
-    img: '../../public/images/poisktenderov.png',
+    img: '/my-resume/src/assets/images/poisktenderov.webp',
     name: 'Poisktenderov',
     stack: ['PUG', 'JavaScript', 'SCSS']
   },
   {
     link: 'https://kamon.dance/',
-    img: '../../public/images/kamon.png',
+    img: '/my-resume/src/assets/images/kamon.webp',
     name: 'Kamon',
     stack: ['Vue', 'JavaScript', 'SCSS']
   },
@@ -77,19 +77,19 @@ const projects = [
 const myProjects = [
   {
     link: 'https://github.com/DWNMRS/',
-    img: '../../public/images/github.png',
+    img: '/my-resume/src/assets/images/github.webp',
     name: 'GitHub',
     stack: []
   },
   {
     link: 'https://dwnmrs.github.io/movee',
-    img: '../../public/images/movee.png',
+    img: '/my-resume/src/assets/images/github.webp',
     name: 'Movee',
     stack: ['Vue', 'TypeScript', 'SCSS', 'Vite']
   },
   {
     link: 'https://dwnmrs.github.io/search',
-    img: '../../public/images/moviesearch.png',
+    img: '/my-resume/src/assets/images/moviesearch.webp',
     name: 'Search',
     stack: ['Nuxt', 'TypeScript', 'SCSS']
   },

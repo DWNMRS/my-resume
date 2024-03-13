@@ -22,7 +22,7 @@
     </div>
 
     <div class="greetings__photo">
-      <img class="greetings__photo-img" src="../../public/images/i2.jpeg">
+      <img class="greetings__photo-img" src="../assets/images/i2.webp">
     </div>
   </div>
 </template>
