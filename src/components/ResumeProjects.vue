@@ -6,7 +6,7 @@
       <div class="projects__list">
         <a class="projects-card" v-for=" project of  projects " :href="project.link" target="_blank">
           <div class="projects-card__img">
-            <img :src="project.img" :alt="'Скриншот главной страницы ' + project.name">
+            <img :src="resolveImgPath(project.img)" :alt="'Скриншот главной страницы ' + project.name">
           </div>
           <div class="projects-card__name">
             {{ project.name }}
@@ -18,12 +18,12 @@
       </div>
     </div>
 
-    <div class="projects__wrapper">
+    <!-- <div class="projects__wrapper">
       <h2 class="projects__title">Пример кода</h2>
       <div class="projects__list">
         <a class="projects-card" v-for="  project  of  myProjects " :href="project.link" target="_blank">
           <div class="projects-card__img">
-            <img :src="project.img" :alt="project.imgAlt + project.name">
+            <img :src="../assets/images/i2.webp" :alt="project.imgAlt + project.name">
           </div>
           <div class="projects-card__name">
             {{ project.name }}
@@ -33,41 +33,42 @@
           </div>
         </a>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script setup>
 
 import { computed } from 'vue'
+
 const projects = [
   {
     link: 'https://vityaz.aero/',
-    img: '/my-resume/src/assets/images/vityaz.webp',
+    img: 'vityaz.webp',
     name: 'Vityaz-aero',
     stack: ['Vue', 'TypeScript', 'SCSS']
   },
   {
     link: 'https://rtg-company.ru/',
-    img: '/my-resume/src/assets/images/rtg.webp',
+    img: 'rtg.webp',
     name: 'Rtg',
     stack: ['JavaScript', 'CSS', 'HTML']
   },
   {
     link: 'https://qpzip.ru/',
-    img: '/my-resume/src/assets/images/qpzip.webp',
+    img: 'qpzip.webp',
     name: 'Qp-zip',
     stack: ['JavaScript', 'CSS', 'HTML']
   },
   {
     link: 'https://poisktenderov.ru/',
-    img: '/my-resume/src/assets/images/poisktenderov.webp',
+    img: 'poisktenderov.webp',
     name: 'Poisktenderov',
     stack: ['PUG', 'JavaScript', 'SCSS']
   },
   {
     link: 'https://kamon.dance/',
-    img: '/my-resume/src/assets/images/kamon.webp',
+    img: 'kamon.webp',
     name: 'Kamon',
     stack: ['Vue', 'JavaScript', 'SCSS']
   },
@@ -77,19 +78,19 @@ const projects = [
 const myProjects = [
   {
     link: 'https://github.com/DWNMRS/',
-    img: '/my-resume/src/assets/images/github.webp',
+    img: 'github.webp',
     name: 'GitHub',
     stack: []
   },
   {
     link: 'https://dwnmrs.github.io/movee',
-    img: '/my-resume/src/assets/images/github.webp',
+    img: 'movee.webp',
     name: 'Movee',
     stack: ['Vue', 'TypeScript', 'SCSS', 'Vite']
   },
   {
     link: 'https://dwnmrs.github.io/search',
-    img: '/my-resume/src/assets/images/moviesearch.webp',
+    img: 'moviesearch.webp',
     name: 'Search',
     stack: ['Nuxt', 'TypeScript', 'SCSS']
   },
@@ -109,6 +110,18 @@ const classes = computed(() => (i) => {
     'projects-card__stack-item--vite': i === 'Vite',
   }
 })
+
+
+const resolveImgPath = (img) => {
+  return new URL(`../assets/images/${img}`, import.meta.url).href;
+}
+
+// setup() {
+//   const getImageUrl = (name) => {
+//     return new URL(`../../lib/Carousel/assets/${name}`, import.meta.url).href
+//   }
+//   return { carouselData, getImageUrl }
+// }
 </script>
 
 <style scoped lang="scss">
