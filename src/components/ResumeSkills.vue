@@ -24,6 +24,14 @@ const skills = ['Vue2/3', 'Nuxt2/3', 'VueX', 'Pinia', 'Vite', 'Webpack', 'Gulp',
   height: 100%;
   margin: 200px 0;
 
+  @include break-md {
+    margin: 140px 0;
+  }
+
+  @include break-md {
+    margin: 80px 0;
+  }
+
   &__title {
     margin-bottom: 56px;
   }
@@ -33,12 +41,25 @@ const skills = ['Vue2/3', 'Nuxt2/3', 'VueX', 'Pinia', 'Vite', 'Webpack', 'Gulp',
     display: flex;
     flex-wrap: wrap;
     gap: 56px;
+
+    @include break-md {
+      font-size: 16px;
+      gap: 24px;
+    }
   }
 
   &__item {
     display: flex;
     align-items: center;
     text-align: center;
+
+    @include break-md {
+      width:calc((100% / 3) - 16px);
+    }
+
+    @include break-sm {
+      width:calc((100% / 2) - 12px);
+    }
   }
 
   &__icon {

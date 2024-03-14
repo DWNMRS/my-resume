@@ -9,15 +9,19 @@ h1 {
   color: $accent;
 
   @include break-xl {
-    font-size: 56px;
+    font-size: 48px;
   }
 
-  @include break-md {
+  @include break-lg {
     font-size: 40px;
   }
 
-  @include break-sm{
+  @include break-md {
     font-size: 32px;
+  }
+
+  @include break-sm{
+    font-size: 24px;
   }
 }
 

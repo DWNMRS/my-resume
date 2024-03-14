@@ -18,12 +18,12 @@
       </div>
     </div>
 
-    <!-- <div class="projects__wrapper">
+    <div class="projects__wrapper">
       <h2 class="projects__title">Пример кода</h2>
       <div class="projects__list">
         <a class="projects-card" v-for="  project  of  myProjects " :href="project.link" target="_blank">
           <div class="projects-card__img">
-            <img :src="../assets/images/i2.webp" :alt="project.imgAlt + project.name">
+            <img :src="resolveImgPath(project.img)" :alt="project.imgAlt + project.name">
           </div>
           <div class="projects-card__name">
             {{ project.name }}
@@ -33,7 +33,7 @@
           </div>
         </a>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -116,12 +116,6 @@ const resolveImgPath = (img) => {
   return new URL(`../assets/images/${img}`, import.meta.url).href;
 }
 
-// setup() {
-//   const getImageUrl = (name) => {
-//     return new URL(`../../lib/Carousel/assets/${name}`, import.meta.url).href
-//   }
-//   return { carouselData, getImageUrl }
-// }
 </script>
 
 <style scoped lang="scss">
@@ -133,6 +127,16 @@ const resolveImgPath = (img) => {
   justify-content: center;
   gap: 200px;
   margin: 200px 0;
+
+  @include break-md {
+    margin: 140px 0;
+    gap: 140px;
+  }
+
+  @include break-md {
+    margin: 80px 0;
+    gap: 80px;
+  }
 
   &__title {
     margin-bottom: 56px;
@@ -147,6 +151,13 @@ const resolveImgPath = (img) => {
   &-card {
     width: calc((100% / 3) - 22px);
     height: auto;
+
+    @include break-md {
+      width: calc((100% / 2) - 16px);
+    }
+    @include break-sm {
+      width: 100%;
+    }
 
     &__name {
       font-size: 20px;
@@ -164,14 +175,14 @@ const resolveImgPath = (img) => {
 
 
       img {
-        width: 105%;
-        height: 105%;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
-        transition: 0.2s;
+        transition: 0.4s;
 
         &:hover {
-          width: 100%;
-          height: 100%;
+          width: 110%;
+          height: 110%;
         }
       }
     }

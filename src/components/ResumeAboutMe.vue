@@ -30,6 +30,18 @@
   border-left: 4px solid $black-light;
   padding-left: 32px;
 
+  @include break-md {
+    padding-left: 0;
+    border-left: none;
+    margin: 140px  0;
+  }
+
+  @include break-md {
+    padding-left: 0;
+    border-left: none;
+    margin: 80px  0;
+  }
+
   &__title {
     margin-bottom: 24px;
   }
@@ -37,9 +49,19 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 32px;
     font-size: 24px;
     font-weight: 400;
+
+    @include break-lg {
+      gap: 24px;
+    }
+
+    @include break-md {
+      gap: 16px;
+      font-size: 16px;
+      font-weight: 300;
+    }
 
     &-item {
       display: flex;

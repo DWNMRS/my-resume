@@ -9,7 +9,7 @@
 
     <ResumeProjects />
 
-    <ResumeFooter/>
+    <ResumeFooter />
   </div>
 </template>
 
@@ -27,5 +27,13 @@ import ResumeFooter from '../components/ResumeFooter.vue'
   padding: 0 32px;
   width: 100%;
   max-width: 1200px;
+
+  @include break-md {
+    padding: 0 16px;
+  }
+
+  @include break-sm {
+    padding: 0 8px;
+  }
 }
 </style>
