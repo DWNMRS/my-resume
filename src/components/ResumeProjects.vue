@@ -90,7 +90,7 @@ const myProjects = [
   },
   {
     link: 'https://dwnmrs.github.io/search',
-    img: 'moviesearch.webp',
+    img: 'search.webp',
     name: 'Search',
     stack: ['Nuxt', 'TypeScript', 'SCSS']
   },
